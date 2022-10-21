@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_template/controllers/orang_controller.dart';
 import 'package:getx_template/controllers/usersC.dart';
+import 'package:getx_template/pages/dashboard.dart';
 import 'package:getx_template/pages/dependency_management_example.dart';
 import 'package:getx_template/pages/getx_storage_example.dart';
 import 'package:getx_template/pages/getx_connect_example.dart';
@@ -13,7 +14,6 @@ import 'package:getx_template/utils/bindings.dart';
 import 'package:getx_template/utils/get_localization.dart';
 
 import 'utils/globals.dart';
-import 'pages/dashboard.dart';
 
 void main() {
   runApp(MyApp());
@@ -139,11 +139,7 @@ class MainPage extends StatelessWidget {
                 //     MaterialPageRoute(
                 //       builder: (context) => const DashboardPage(),
                 //     ));
-                Navigator.push(
-                    navigatorKey.currentContext!,
-                    MaterialPageRoute(
-                      builder: (context) => const DashboardPage(),
-                    ));
+                Get.to(() => DashboardPage());
               },
               child: Text('CONTOH DASHBOARD')),
           SizedBox(
